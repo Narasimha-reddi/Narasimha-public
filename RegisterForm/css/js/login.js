@@ -13,13 +13,12 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     const password = document.getElementById("password").value;
 
     const users = JSON.parse(localStorage.getItem("users")) || [];
-
     const user = users.find(user => user.username === username);
 
     if (user) {
         const hashedInputPassword = await hashPassword(password);
-
         if (user.password === hashedInputPassword) {
+            sessionStorage.setItem("isLoggedIn", "true");
             alert("Login Successful!");
             window.location.href = "fetch.html";
         } else {

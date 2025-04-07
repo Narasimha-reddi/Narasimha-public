@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -11,7 +10,7 @@
         <h2>Register</h2>
         <form id="registerForm">
             <label for="username">Username</label>
-            <input type="text" id="username" required> 
+            <input type="text" id="username" required>
             <label for="password">Password</label>
             <input type="password" id="password" required>
             <button type="submit">Register</button>
@@ -19,6 +18,11 @@
         <p>Already have an account? <a href="login.html">Login</a></p>
     </div>
 
+    <script>
+        if (sessionStorage.getItem("isLoggedIn")) {
+            window.location.href = "fetch.html";
+        }
+    </script>
     <script src="css/js/register.js"></script>
 </body>
 </html>
