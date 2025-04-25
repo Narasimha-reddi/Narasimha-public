@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+  <h2>Checkout Summary</h2>
+  <div id="orderSummary"></div>
+
+  <form id="shippingForm">
+    <h2>Saved Addresses:</h2>
+  <select id="savedAddresses">
+    <option value="">-- Saved Address --</option>
+  </select>
+    <h3>Add New Address:</h3>
+    <input type="text" id="address" placeholder="Delivery Address" required><br>
+    <input type="text" id="phone" placeholder="Phone Number" required><br>
+    <button type="submit">Place Order</button>
+  </form>
+
+  <script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+body{
+    background-image: url(../images/foodimage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.auth-box {
+    border: 2px solid #423d3d;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 50px auto;
+    float: left;
+}
+.auth-box button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.auth-box button:hover {
+    background-color: #218838;
+}
+h1,p{
+    text-align: left;
+}
