@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans flex flex-col items-center min-h-screen p-0 m-0">
+
+  <h2 class="mt-10 text-3xl text-black-500">Checkout Summary</h2>
+  
+  <div id="orderSummary" class="w-full max-w-lg bg-white p-6 mt-6 shadow-lg rounded-lg">
+  </div>
+
+  <form id="shippingForm" class="w-full max-w-lg bg-white p-6 mt-6 shadow-lg rounded-lg flex flex-col">
+    <h2 class="text-xl text-gray-700 mb-4">Saved Addresses:</h2>
+    
+    <select id="savedAddresses" class="p-3 mb-4 border border-gray-300 rounded-md text-lg w-full">
+      <option value="">-- Saved Address --</option>
+    </select>
+    
+    <h3 class="text-lg text-gray-600 mb-3">Add New Address:</h3>
+    
+    <input type="text" id="address" placeholder="Delivery Address" required class="p-3 mb-4 border border-gray-300 rounded-md text-lg w-full">
+    <input type="text" id="phone" placeholder="Phone Number" required class="p-3 mb-4 border border-gray-300 rounded-md text-lg w-full">
+    
+    <button type="submit" class="py-3 px-6 bg-green-600 text-white text-lg rounded-md hover:bg-green-700 transition duration-200">
+      Place Order
+    </button>
+  </form>
+
+  <script src="js/checkout.js"></script>
+</body>
+</html>

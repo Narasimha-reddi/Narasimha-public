@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center min-h-screen m-0 font-[Arial,sans-serif] bg-[#f8f8f8]">
+
+  <h1 class="text-3xl text-[#333] mb-5 mt-0">Cart Items</h1>
+
+  <div id="cartItems" class="w-4/5 max-w-[400px] bg-white p-5 shadow-[0_2px_8px_rgba(0,0,0,0.1)] mb-5 rounded-[10px] flex flex-col gap-[10px] float-left">
+  </div>
+
+  <h3 class="mb-5 text-[1.2em]">Total: ₹<span id="cartTotal">0</span></h3>
+
+  <button id="checkoutBtn" class="px-[15px] py-[10px] text-[16px] bg-[#28a745] text-white rounded-[6px] border-none cursor-pointer transition duration-300 hover:bg-[#218838]">
+    Proceed to Checkout
+  </button>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>

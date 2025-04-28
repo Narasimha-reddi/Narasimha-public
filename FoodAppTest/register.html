@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col items-center pt-16 m-0 font-sans">
+  <h2 class="text-gray-800 mb-5 text-2xl font-semibold">Register</h2>
+
+  <form id="registerForm" class="bg-white px-10 py-8 rounded-lg shadow-lg w-[300px]">
+    <input type="text" id="name" placeholder="Full Name" required
+      class="w-full p-2 mt-2 mb-5 border border-gray-300 rounded-md text-sm box-border">
+
+    <input type="email" id="email" placeholder="Email" required
+      class="w-full p-2 mt-2 mb-5 border border-gray-300 rounded-md text-sm box-border">
+
+    <input type="password" id="password" placeholder="Password" required
+      class="w-full p-2 mt-2 mb-5 border border-gray-300 rounded-md text-sm box-border">
+
+    <select id="role"
+      class="w-full p-2 mt-2 mb-5 border border-gray-300 rounded-md text-sm box-border">
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
+    </select>
+
+    <button type="submit"
+      class="w-full p-2 bg-green-600 text-white rounded-md text-lg cursor-pointer hover:bg-green-700 transition-colors">
+      Register
+    </button>
+  </form>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0 font-sans bg-gray-100 h-screen overflow-hidden">
+
+  <h1 class="text-center bg-[#2c3e50] text-white mb-2 p-5 text-[32px] font-bold">
+    Admin Dashboard
+  </h1>
+
+  <div class="flex h-[calc(100vh-80px)]">
+
+    <div class="sticky top-0 w-[350px] bg-white p-5 border-r border-gray-300 shadow-[2px_0_5px_rgba(0,0,0,0.05)] h-full">
+      <form id="addFoodForm" class="flex flex-col">
+        <h2 class="text-[24px] font-semibold mb-4">Admin Panel</h2>
+
+        <input type="text" id="foodName" placeholder="Food Name" required
+          class="mb-[15px] p-[10px] text-[14px] border border-gray-300 rounded-[5px]">
+
+        <input type="number" id="foodPrice" placeholder="Price" required
+          class="mb-[15px] p-[10px] text-[14px] border border-gray-300 rounded-[5px]">
+
+        <input type="file" id="foodImage" accept="image/*" required
+          class="mb-[15px] p-[10px] text-[14px] border border-gray-300 rounded-[5px]">
+
+        <select id="foodCategory"
+          class="mb-[15px] p-[10px] text-[14px] border border-gray-300 rounded-[5px]">
+          <option value="veg">Veg</option>
+          <option value="nonveg">Non-Veg</option>
+        </select>
+
+        <button type="submit"
+          class="mb-[15px] p-[10px] text-[14px] bg-[#3498db] text-white border-none rounded-[5px] cursor-pointer transition-colors duration-200 hover:bg-[#2980b9]">
+          Add Food
+        </button>
+
+        <button type="button" id="updateBtn"
+          class="hidden mb-[15px] p-[10px] text-[14px] bg-[#3498db] text-white border-none rounded-[5px] cursor-pointer transition-colors duration-200 hover:bg-[#2980b9]">
+          Update Food
+        </button>
+      </form>
+    </div>
+
+    <div class="flex-grow p-5 overflow-y-auto h-full food-list-section">
+      <h2 class="mt-0 mb-4 text-[24px] font-semibold">Available Food Items</h2>
+      
+      <div id="foodList" class="grid grid-cols-4 gap-[20px] food-list-grid">
+        <div class="food-item bg-white border border-gray-300 p-[10px] rounded-[8px] text-center shadow-[0_2px_5px_rgba(0,0,0,0.1)]">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
